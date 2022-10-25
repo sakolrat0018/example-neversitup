@@ -79,6 +79,7 @@ class MainCurrencyViewController: UIViewController {
             self!.btnSelectCoin.setTitle(item, for: .normal)
             self!.priceSelect = (dropDown.accessibilityElements![index] as! Float)
             self!.typeSelect = item
+            self!.viewModel.convertCurrency(quantity: Int(self!.txt1.text!) ?? 0, typeSelect: self!.typeSelect, priceSelect: self!.priceSelect)
         }
     }
     
