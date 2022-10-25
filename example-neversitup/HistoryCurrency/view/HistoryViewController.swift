@@ -71,6 +71,8 @@ extension HistoryViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SecCell") as! SecTableViewCell
         
+        cell.backgroundColor = .white
+        
         let sec : Currency = data[section]
         cell.lbSecTitle.text = sec.timestamp
         
